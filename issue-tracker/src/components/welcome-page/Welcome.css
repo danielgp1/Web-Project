@@ -1,4 +1,4 @@
-body{
+.body-welcome{
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -14,7 +14,7 @@ body{
 	background-repeat: no-repeat;
 	/* background: linear-gradient(to bottom, #313131, #7d7c7c, #313131); */
 }
-label{
+.welcome-label{
 	color: #fff; 
 	font-size: 2.3em;
 	justify-content: center;
@@ -25,7 +25,7 @@ label{
 	transition: .5s ease-in-out;
 	caret-color: transparent;
 }
-input{
+.welcome-input{
 	width: 60%;
 	height: 20px;
 	background: #e0dede;
@@ -38,11 +38,11 @@ input{
 	border-radius: 5px;
 	transition: border-color .5s ease-out;
 }
-input:focus {
+.welcome-input:focus {
 	border-color: #6d6d6d;
 }
 
-button{
+.welcome-button{
 	width: 60%;
 	height: 40px;
 	margin: 10px auto;
@@ -60,7 +60,7 @@ button{
 	cursor: pointer;
 	caret-color: transparent; 
 }
-button:hover{
+.welcome-button:hover{
 	background: #313131;
 }
 .main{

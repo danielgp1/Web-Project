@@ -162,37 +162,39 @@ function App() {
   };
 
   return (
-    <div className="main">
-      <input type="checkbox" id="chk" aria-hidden="true" />
-      <div className="register">
-        <div>
-          <label htmlFor="chk" aria-hidden="true" onClick={() => handleLoginVisibility()}>Register</label>
-          <input type="text" id="fname" name="txt" placeholder="First Name" required />
-          <input type="text" id="lname" name="txt" placeholder="Last Name" required />
-          <input type="text" name="txt" id="reg_username" placeholder="Username" required />
-          <input type="email" name="email" id="reg_email" placeholder="Email" required />
-          <div className="password-container">
-            <input type="password" name="pwd" id="reg_password" placeholder="Password" required />
-            <FontAwesomeIcon icon={regPwdEyeClass} id="eye1" onClick={() => handleTogglePasswordVisibility('reg_password')} />
+    <div className='body-welcome'>
+      <div className="main">
+        <input type="checkbox" id="chk" aria-hidden="true" />
+        <div className="register">
+          <div>
+            <label className='welcome-label' htmlFor="chk" aria-hidden="true" onClick={() => handleLoginVisibility()}>Register</label>
+            <input className='welcome-input' type="text" id="fname" name="txt" placeholder="First Name" required />
+            <input className='welcome-input' type="text" id="lname" name="txt" placeholder="Last Name" required />
+            <input className='welcome-input' type="text" name="txt" id="reg_username" placeholder="Username" required />
+            <input className='welcome-input' type="email" name="email" id="reg_email" placeholder="Email" required />
+            <div className="password-container">
+              <input className='welcome-input' type="password" name="pwd" id="reg_password" placeholder="Password" required />
+              <FontAwesomeIcon icon={regPwdEyeClass} id="eye1" onClick={() => handleTogglePasswordVisibility('reg_password')} />
+            </div>
+            <div className="password-container">
+              <input className='welcome-input' type="password" name="cpwd" id="confirm_password" placeholder="Confirm Password" />
+              <FontAwesomeIcon icon={confirmPwdEyeClass} id="eye2" onClick={() => handleTogglePasswordVisibility('confirm_password')} />
+            </div>
+            <button className='welcome-button' id="regBtn" onClick={handleRegistration}>Register</button>
           </div>
-          <div className="password-container">
-            <input type="password" name="cpwd" id="confirm_password" placeholder="Confirm Password" />
-            <FontAwesomeIcon icon={confirmPwdEyeClass} id="eye2" onClick={() => handleTogglePasswordVisibility('confirm_password')} />
-          </div>
-          <button id="regBtn" onClick={handleRegistration}>Register</button>
         </div>
-      </div>
 
-      <div className="login">
-        <label htmlFor="chk" aria-hidden="true" onClick={() => handleLoginVisibility()}>Login</label>
-        <div id="login-box">
-          <input type="email" name="email" id="login_email" placeholder="Email" required />
-          <div className="password-container">
-            <input type="password" name="pwd" id="login_password" placeholder="Password" required  />
-            <FontAwesomeIcon icon={loginPwdEyeClass} id="eye3" onClick={() => handleTogglePasswordVisibility('login_password')} />
+        <div className="login">
+          <label className='welcome-label' htmlFor="chk" aria-hidden="true" onClick={() => handleLoginVisibility()}>Login</label>
+          <div id="login-box">
+            <input className='welcome-input' type="email" name="email" id="login_email" placeholder="Email" required />
+            <div className="password-container">
+              <input className='welcome-input' type="password" name="pwd" id="login_password" placeholder="Password" required  />
+              <FontAwesomeIcon icon={loginPwdEyeClass} id="eye3" onClick={() => handleTogglePasswordVisibility('login_password')} />
+            </div>
+            <button className='welcome-button' id="logBtn" onClick={handleLogin}>Login</button>
+            <img src={logo} alt="Logo" />
           </div>
-          <button id="logBtn" onClick={handleLogin}>Login</button>
-          <img src={logo} alt="Logo" />
         </div>
       </div>
     </div>
